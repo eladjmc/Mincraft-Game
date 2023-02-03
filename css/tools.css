@@ -1,33 +1,40 @@
 .option-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: 12rem;
-    height: 100vh;
-    background-color: rgb(2, 18, 2);
-    position: sticky;
-    left: 0;
-  }
-
-.tools {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    border: 1px solid black;
-    gap: 10px;
-    font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 12rem;
+  height: 100vh;
+  background-color: rgb(2, 18, 2);
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  left: 0;
 }
 
-.axe, .pickaxe, .vacuum, .shovel{
-   width: 10rem;
-   height: 10rem;
-   background-color: brown;
+.tools {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  border: 1px solid black;
+  gap: 10px;
+  font-size: 1.6rem;
+}
+
+.axe,
+.pickaxe,
+.vacuum,
+.shovel {
+  width: 10rem;
+  height: 10rem;
+  background-color: brown;
 }
 
 .tool-active {
-    border: 4px solid orangered;
-    box-sizing: border-box;
+  border: 4px solid orangered;
+  box-sizing: border-box;
 }
