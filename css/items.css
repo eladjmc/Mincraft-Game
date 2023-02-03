@@ -1,0 +1,24 @@
+
+.inventory {
+    display: flex;
+    gap: 1rem;
+}
+.item {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: .3rem;
+    padding-bottom: .2rem;
+}
+
+.item-amount {
+    font-size: 1.7rem;
+    width: 40%;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+
+}
