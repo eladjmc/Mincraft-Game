@@ -14,6 +14,10 @@ export default  {
       tier: 10,
       tools: [ToolsModels.axe]
     },
+    [TilesTypes.stone]: {
+      tier: 10,
+      tools: [ToolsModels.pickaxe]
+    },
     [TilesTypes.cloud]: {
       tier: 100,
       tools: [ToolsModels.vacuum]

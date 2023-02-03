@@ -7,7 +7,7 @@ const resetBtn = document.querySelector(".reset-game-btn");
 const main = () => {
   buttonListeners();
   if (!world) return;
-  const game = new Game(20, 20);
+  const game = new Game(40, 20);
   game.buildWorld(world);
   game.buildToolKit();
   game.buildInventory(inventory);

@@ -1,5 +1,17 @@
+.option-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 12rem;
+    height: 100%;
+    background-color: rgb(2, 18, 2);
+  }
+
 .tools {
     display: flex;
+    flex-direction: column;
     width: 100%;
     align-items: center;
     border: 1px solid black;
@@ -15,4 +27,5 @@
 
 .tool-active {
     border: 4px solid orangered;
+    box-sizing: border-box;
 }

@@ -1,7 +1,13 @@
 
 .inventory {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: flex;
     gap: 1rem;
+    padding: 3rem;
+    background-color: #000;
 }
 .item {
     width: 5rem;
