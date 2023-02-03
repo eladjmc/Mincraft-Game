@@ -29,4 +29,5 @@ const buttonListeners = () => {
 };
 window.onload = () => {
   main();
+  screen.orientation.lock('landscape');
 };
