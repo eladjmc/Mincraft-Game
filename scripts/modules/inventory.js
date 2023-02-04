@@ -9,6 +9,9 @@ export class Inventory {
   init = (onItemClick) => {
     const inventoryItems = Object.values(TilesModels);
     inventoryItems.forEach((item) => {
+      if(item ===TilesModels.sky){ 
+        return;
+      }
       const newItem = document.createElement("div");
       newItem.classList.add("item");
       const inventoryItem = new InventoryItem(newItem, item);

@@ -8,7 +8,6 @@ export class Tool {
 
   init = (onClick,isFirstTool) => {
     this.element.classList.add(this.type);
-    this.element.textContent = this.type;
     if(isFirstTool){
       this.element.classList.add('tool-active');
     }

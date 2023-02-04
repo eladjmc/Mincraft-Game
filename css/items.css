@@ -1,28 +1,92 @@
+.inventory-window {
+  cursor: pointer;
+  width: 9rem;
+  height: 9rem;
+  background: url("/assets/images/boxAnimated.webp") no-repeat center
+    center/cover;
+  position: relative;
+}
+
+.inventory-window::after {
+  position: absolute;
+  left: 0;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  content: "Inventory Box";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  border: #000 1px solid;
+  opacity: 0.77;
+  transition: all 0.2s linear;
+  transform: scale(0);
+}
+
+.inventory-window:hover::after {
+  transform: scale(1);
+}
+
+.inventory-window-position {
+    position: relative;
+}
 
 .inventory {
-    position: absolute;
-    left:20rem;
-    display: flex;
-    gap: 1rem;
-    padding: 3rem;
-    background-color: #000;
+  position: absolute;
+  left: 0;
+  bottom: -12rem;
+  display: flex;
+  gap: 1rem;
+  padding: 3rem;
+  background-color: rgba(78, 62, 20, 0.945);
+  border-radius: 2rem;
+  border: 0.2rem solid rgba(255, 217, 0, 0.808);
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+  transform-origin: left;
+  transform: scaleX(0) scaleY(0);
+  box-shadow: -2px 5px 15px 5px #000000;
 }
+
+.scale-one {
+    left: 7rem;
+  transform: scaleX(1) scaleY(1);
+}
+
 .item {
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding-left: .3rem;
-    padding-bottom: .2rem;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 0.3rem;
+  padding-bottom: 0.2rem;
+  background-color: rgb(2, 18, 2);
+  border: 1px solid white;
+}
+.tool-active {
+  box-sizing: border-box;
+  animation: active_animation .8s infinite 0s;
+}
+
+@keyframes active_animation {
+    0% {
+        border: 6px double rgb(51, 144, 17);
+        
+    }
+    100% {
+        border: 6px solid transparent;
+    }
 }
 
 .item-amount {
-    font-size: 1.7rem;
-    width: 40%;
-    color: #fff;
-    background-color: #000;
-    border-radius: 50%;
-    text-align: center;
-
+  font-size: 1.7rem;
+  width: 40%;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  text-align: center;
 }

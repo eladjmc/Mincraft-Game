@@ -1,5 +1,4 @@
-
-.game-section{
+.game-section {
   height: 100vh;
 }
 
@@ -21,11 +20,10 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  max-width: 1380px;
   padding: 1rem;
-  
+  padding-right: 5rem;
 }
-
-
 
 .row {
   width: 100%;
@@ -35,31 +33,31 @@
   height: 3.5rem;
   flex: 1;
 }
-
+.cell:hover {
+  outline: 1px white solid;
+  box-sizing: border-box;
+}
+.cloud {
+  background-color: beige;
+}
 .sky {
   background-color: cornflowerblue;
 }
 .soil {
-  background: url("/assets/images/soil.png") no-repeat center
-    center/cover;
+  background: url("/assets/images/soil.png") no-repeat center center/cover;
 }
 .grass {
-  background: url("/assets/images/grass.png") no-repeat center
-    center/cover;
+  background: url("/assets/images/grass.png") no-repeat center center/cover;
 }
 .wood {
-  background: url("/assets/images/wood.png") no-repeat center
-    center/cover;
+  background: url("/assets/images/wood.png") no-repeat center center/cover;
 }
 .leaves {
-  background: url("/assets/images/leaves.png") no-repeat center
-    center/cover;
+  background: url("/assets/images/leaves.png") no-repeat center center/cover;
 }
 .stone {
   background: url("/assets/images/cobbleTexture.png") no-repeat center
     center/cover;
 }
 
-.cloud {
-  background-color: beige;
-}
+

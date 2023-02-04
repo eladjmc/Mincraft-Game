@@ -7,6 +7,8 @@ import { Inventory } from "./inventory.js";
 import { STARTING_TEMPLATE } from "../models/tiles-template.js";
 import { Upgrade } from "./upgrade.js";
 
+const TOOLS_MAX_TIER = 30;
+
 const ActionType = {
   add: "add",
   subtract: "subtract",
@@ -64,8 +66,9 @@ export default class Game {
   };
 
   generateTileType = (x, y) => {
-    const amountOfRows = STARTING_TEMPLATE.size -1 // The length (height) of the 'STARTING_TEMPLATE'
-    const rowFromTemplate = STARTING_TEMPLATE.get(y) || STARTING_TEMPLATE.get(amountOfRows);
+    const amountOfRows = STARTING_TEMPLATE.size - 1; // The length (height) of the 'STARTING_TEMPLATE'
+    const rowFromTemplate =
+      STARTING_TEMPLATE.get(y) || STARTING_TEMPLATE.get(amountOfRows);
     const cellFromTemplate = rowFromTemplate.at(x) || rowFromTemplate.at(0);
     //TODO: Make a Function that some times randomize soil for other materials
 
@@ -79,7 +82,6 @@ export default class Game {
       const isTierHighEnough = tileToHarvest.tier <= this.toolTier;
       // checks if you have the right tool for harvesting (tool and power of the tool)
       if (tileToHarvest.tools.includes(this.activeTool) && isTierHighEnough) {
-
         this.upgrade.addAction();
         this.inventory.add(tile.type);
         tile.setTileType(TilesModels.sky);
@@ -89,7 +91,7 @@ export default class Game {
       if (!this.activeTile) {
         return;
       }
-      if(!this.inventory.hasItem(this.activeTile)){
+      if (!this.inventory.hasItem(this.activeTile)) {
         return;
       }
 
@@ -123,6 +125,18 @@ export default class Game {
 
   onUpgrade = () => {
     this.toolTier += 10;
+    if (this.toolTier === TOOLS_MAX_TIER) {
+      this.upgrade.stopUpgrading();
+    }
     //TODO: update the doom - change tools avatars
-  }
+    const axeElement = document.querySelector(".axe");
+    const pickaxeElement = document.querySelector(".pickaxe");
+    const shovelElement = document.querySelector(".shovel");
+    this.upgrade.changeToolsUI(
+      axeElement,
+      pickaxeElement,
+      shovelElement,
+      this.toolTier
+    );
+  };
 }

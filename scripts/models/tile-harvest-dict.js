@@ -19,7 +19,7 @@ export default  {
       tools: [ToolsModels.pickaxe]
     },
     [TilesTypes.cloud]: {
-      tier: 100,
+      tier: 10,
       tools: [ToolsModels.vacuum]
     },
     [TilesTypes.leaves]: {

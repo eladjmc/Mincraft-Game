@@ -3,6 +3,7 @@ const world = document.getElementById("world");
 const inventory = document.querySelector(".inventory");
 const tools = document.querySelector(".tools");
 const resetBtn = document.querySelector(".reset-game-btn");
+const inventoryWindow = document.querySelector(".inventory-window");
 
 const main = () => {
   buttonListeners();
@@ -13,10 +14,13 @@ const main = () => {
   game.buildInventory(inventory);
 };
 const resetGame = () => {
-  world.innerHTML = "";
-  inventory.innerHTML = "";
-  tools.innerHTML = "";
-  main();
+  for (let index = 0; index < 2; index++) { // No idea why buy this fixed inventory bug
+    inventory.classList.remove("scale-one");
+    world.innerHTML = "";
+    inventory.innerHTML = "";
+    tools.innerHTML = "";
+    main();
+  }
 };
 
 const buttonListeners = () => {
@@ -26,6 +30,10 @@ const buttonListeners = () => {
     document.querySelector(".game-scene").classList.remove("display-none");
   });
   resetBtn.addEventListener("click", resetGame);
+
+  inventoryWindow.addEventListener("click", () => {
+    inventory.classList.toggle("scale-one");
+  });
 };
 window.onload = () => {
   main();

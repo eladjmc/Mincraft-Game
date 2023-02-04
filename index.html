@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tools.css">
     <link rel="stylesheet" href="/css/items.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="/css/start.css">
     <title>MineCraft2D</title>
 </head>
@@ -55,14 +55,22 @@
         </div>
     </section>
 
-    
+
     <main class="game-scene display-none">
         <header class="option-bar">
-            <button class="upgrade" >UP</button>
+            <button class="upgrade">
+                <div class="tool-upgrade-background"></div>
+            </button>
             <div class="tools"></div>
-            <div class="inventory"></div>
-            <div class="inventory-window"></div>
-            <button class="reset-game-btn">Reset</button>
+            <div class="inventory-window-position">
+                <div class="inventory opacity-zero"></div>
+            </div>
+            <div class="inventory-window">
+            </div>
+            <div class="reset-game-btn">
+                <div class="reset-text"><span>Reset</span></div>
+                <button class="reset-game-btn-anim"></button>
+            </div>
         </header>
         <div id="world" class="game-container">
 
