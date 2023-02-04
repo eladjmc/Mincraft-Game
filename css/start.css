@@ -149,3 +149,19 @@ path.two {
 .display-none {
     display: none;
 }
+
+
+@media only screen and (max-width: 800px) {
+  .game-start-scene .logo {
+
+   transform: scale(0.4);
+  }
+
+  .start-btn {
+    transform: scale(0.8);
+  }
+
+  .game-start-scene {
+    font-size: 1.4rem;
+  }
+}
