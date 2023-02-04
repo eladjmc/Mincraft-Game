@@ -36,7 +36,8 @@ const resetGame = () => {
 };
 
 const setSoundVolume = () => {
-  resetGameSound.volume = 0.7g;
+
+  resetGameSound.volume = 0.7;
   openInventorySound.volume = 0.7;
   closeInventorySound.volume = 0.7;
   gameMusic.volume = 0.2;
