@@ -76,6 +76,7 @@
 .leaveser {
   background: url("/assets/images/strongLeaves.webp") no-repeat center
   center/cover;
+  background-color: rgb(2, 18, 2);
 }
 
 
