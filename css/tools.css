@@ -39,10 +39,8 @@
     center/cover;
 }
 .vacuum {
-  background: url("/assets/images/vacuu.png") no-repeat center
-    center/cover;
+  background: url("/assets/images/vacuu.png") no-repeat center center/cover;
 }
-
 
 .shovel-tier20 {
   background: url("/assets/images/goldShovelTexture.png") no-repeat center
@@ -57,7 +55,6 @@
     center/cover;
 }
 
-
 .shovel-tier30 {
   background: url("/assets/images/diamondShovelTexture.png") no-repeat center
     center/cover;
@@ -71,8 +68,6 @@
     center/cover;
 }
 
-
-
 .axe,
 .pickaxe,
 .vacuum,
@@ -81,6 +76,13 @@
   width: 10rem;
   height: 10rem;
   background-color: rgb(255, 255, 255);
+}
+
+.axe:hover,
+.pickaxe:hover,
+.vacuum:hover,
+.shovel:hover {
+  cursor: pointer;
 }
 
 .upgrade {
@@ -150,7 +152,7 @@
   text-align: center;
   position: absolute;
   top: 0.7rem;
-  left: -.65rem;
+  left: -0.65rem;
   z-index: 10;
   text-shadow: 2px 2px 2px #000000;
 }
@@ -176,7 +178,7 @@
 @keyframes reset_button_animation {
   0% {
     transform: rotate(0deg);
-    }
+  }
   100% {
     transform: rotate(180deg);
   }

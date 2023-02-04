@@ -57,7 +57,7 @@
   background-color: rgb(2, 18, 2);
 }
 .stone {
-  background: url("/assets/images/cobbleTexture.png") no-repeat center
+  background: url("/assets/images/stone.png") no-repeat center
     center/cover;
 }
 
