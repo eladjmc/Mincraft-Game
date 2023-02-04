@@ -8,11 +8,13 @@ import { STARTING_TEMPLATE } from "../models/tiles-template.js";
 import { Upgrade } from "./upgrade.js";
 
 const TOOLS_MAX_TIER = 30;
-
 const ActionType = {
   add: "add",
   subtract: "subtract",
 };
+const hitSound = new Audio("../../assets/sounds/Minecrafthitsound.mp3");
+const upgradeSound = new Audio("../../assets/sounds/levelUp.mp3");
+upgradeSound.volume = 0.5;
 
 export default class Game {
   inventory = null;
@@ -87,6 +89,9 @@ export default class Game {
         this.upgrade.addAction();
         this.inventory.add(tile.type);
         tile.setTileType(TilesModels.sky);
+        hitSound.pause();
+        hitSound.currentTime=0.5;
+        hitSound.play();
       }
     }
     if (this.actionType === ActionType.add && tile.type === TilesModels.sky) {
@@ -100,6 +105,9 @@ export default class Game {
       this.upgrade.addAction();
       this.inventory.remove(this.activeTile);
       tile.setTileType(this.activeTile);
+      hitSound.pause();
+      hitSound.currentTime=0.5;
+      hitSound.play();
     }
   };
 
@@ -130,6 +138,8 @@ export default class Game {
     if (this.toolTier === TOOLS_MAX_TIER) {
       this.upgrade.stopUpgrading();
     }
+    upgradeSound.currentTime = 0.2;
+    upgradeSound.play();
     const axeElement = document.querySelector(".axe");
     const pickaxeElement = document.querySelector(".pickaxe");
     const shovelElement = document.querySelector(".shovel");

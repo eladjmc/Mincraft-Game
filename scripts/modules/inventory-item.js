@@ -17,6 +17,8 @@ export default class InventoryItem {
       }
       onItemClick(this.type);
       this.element.classList.add("tool-active");
+      //TODO: add cursors to the cursor folder
+      document.querySelector('body').style=`cursor:url(/assets/cursors/${this.type}.cur) 20 7, auto`;
     });
   };
   addToAmount = () => {
