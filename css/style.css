@@ -54,10 +54,28 @@
 }
 .leaves {
   background: url("/assets/images/leaves.png") no-repeat center center/cover;
+  background-color: rgb(2, 18, 2);
 }
 .stone {
   background: url("/assets/images/cobbleTexture.png") no-repeat center
     center/cover;
+}
+
+.gold {
+  background: url("/assets/images/goldTexture.png") no-repeat center
+  center/cover;
+}
+.diamond {
+  background: url("/assets/images/diamondTexture.png") no-repeat center
+  center/cover;
+}
+.wooder {
+  background: url("/assets/images/strongWood.webp") no-repeat center
+  center/cover;
+}
+.leaveser {
+  background: url("/assets/images/strongLeaves.webp") no-repeat center
+  center/cover;
 }
 
 

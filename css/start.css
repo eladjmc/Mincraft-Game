@@ -37,8 +37,8 @@
   gap: 1rem;
 }
 
-.tutorial  p{
-text-shadow: white 1px 1px 8px;
+.tutorial p {
+  text-shadow: white 1px 1px 8px;
 }
 .tutorial {
   display: flex;
@@ -52,9 +52,7 @@ text-shadow: white 1px 1px 8px;
 /* #                                                                                                        # */
 /* ########################################################################################################## */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
-
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
 
 .start-btn {
   display: flex;
@@ -62,99 +60,95 @@ text-shadow: white 1px 1px 8px;
 }
 
 .cta {
-    display: flex;
-    padding: 10px 45px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    color: white;
-    background: #4d4c4d;
-    transition: 1s;
-    box-shadow: 6px 6px 0 black;
-    transform: skewX(-15deg);
+  display: flex;
+  padding: 10px 45px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: white;
+  background: #4d4c4d;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
 }
 
 .cta:focus {
-   outline: none; 
+  outline: none;
 }
 
 .cta:hover {
-    transition: 0.5s;
-    box-shadow: 10px 10px 0 #1f5d15;
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #1f5d15;
 }
 
 .cta span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 0px;
+  transition: 0.5s;
+  margin-right: 0px;
 }
 
-.cta:hover  span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 45px;
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
 }
 
-  span {
-    transform: skewX(15deg) 
-  }
+span {
+  transform: skewX(15deg);
+}
 
-  span:nth-child(2) {
-    width: 20px;
-    margin-left: 30px;
-    position: relative;
-    top: 12%;
-  }
-  
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
 /**************SVG****************/
 
 path.one {
-    transition: 0.4s;
-    transform: translateX(-60%);
+  transition: 0.4s;
+  transform: translateX(-60%);
 }
 
 path.two {
-    transition: 0.5s;
-    transform: translateX(-30%);
+  transition: 0.5s;
+  transform: translateX(-30%);
 }
 
 .cta:hover path.three {
-    animation: color_anim 1s infinite 0.2s;
+  animation: color_anim 1s infinite 0.2s;
 }
 
 .cta:hover path.one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
 }
 
-
 .cta:hover path.two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
 }
 
 /* SVG animations */
 
 @keyframes color_anim {
-    0% {
-        fill: white;
-    }
-    50% {
-        fill: #1f5d15;
-    }
-    100% {
-        fill: white;
-    }
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #1f5d15;
+  }
+  100% {
+    fill: white;
+  }
 }
-
 
 .display-none {
-    display: none;
+  display: none;
 }
-
 
 @media only screen and (max-width: 800px) {
   .game-start-scene .logo {
-
-   transform: scale(0.4);
+    transform: scale(0.4);
   }
 
   .start-btn {
@@ -163,5 +157,77 @@ path.two {
 
   .game-start-scene {
     font-size: 1.4rem;
+  }
+}
+
+
+@media only screen and (min-width: 1920px) {
+  .game-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+    
+    
+  }
+  
+  .game-scene {
+    height: 100vh;
+    width: 100vw;
+    
+    min-width: 1500px;
+    background-color: rgb(2, 18, 2);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+
+    
+  }
+
+  
+  .game-container {
+    transform: scaleX(1.3) scaleY(1.1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1200px;
+    max-width: 1380px;
+    padding: 1rem;
+ 
+    
+  }
+  .row {
+    width: 100%;
+    display: flex;
+  }
+  .option-bar {
+    transform: scaleX(1.3) scaleY(1.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 12rem;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgb(2, 18, 2);
+    position: relative;
+    padding-left: 1rem;
+    left: -20rem;
+    z-index: 50;
+  }
+
+  .tools {
+z-index: 100;
+
   }
 }

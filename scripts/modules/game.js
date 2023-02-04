@@ -69,9 +69,11 @@ export default class Game {
     const amountOfRows = STARTING_TEMPLATE.size - 1; // The length (height) of the 'STARTING_TEMPLATE'
     const rowFromTemplate =
       STARTING_TEMPLATE.get(y) || STARTING_TEMPLATE.get(amountOfRows);
-    const cellFromTemplate = rowFromTemplate.at(x) || rowFromTemplate.at(0);
+    let cellFromTemplate = rowFromTemplate.at(x) || rowFromTemplate.at(0);
     //TODO: Make a Function that some times randomize soil for other materials
-
+    if (cellFromTemplate === TilesModels.soil) {
+      cellFromTemplate = this.getRandomSoilTile();
+    }
     // 'cellFromTemplate' is either the found string or the first string in the row
     return cellFromTemplate;
   };
@@ -128,7 +130,6 @@ export default class Game {
     if (this.toolTier === TOOLS_MAX_TIER) {
       this.upgrade.stopUpgrading();
     }
-    //TODO: update the doom - change tools avatars
     const axeElement = document.querySelector(".axe");
     const pickaxeElement = document.querySelector(".pickaxe");
     const shovelElement = document.querySelector(".shovel");
@@ -139,4 +140,11 @@ export default class Game {
       this.toolTier
     );
   };
+
+  getRandomSoilTile() {
+    const HARDEST_CHANCE = 15;
+    const chance = Math.floor(Math.random() * HARDEST_CHANCE) + 1;
+    if (chance < HARDEST_CHANCE - 3) return TilesModels.soil;
+    return chance === HARDEST_CHANCE ? TilesModels.diamond : TilesModels.gold;
+  }
 }

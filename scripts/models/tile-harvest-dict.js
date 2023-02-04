@@ -14,6 +14,14 @@ export default  {
       tier: 10,
       tools: [ToolsModels.axe]
     },
+    [TilesTypes.gold]: {
+      tier: 20,
+      tools: [ToolsModels.pickaxe]
+    },
+    [TilesTypes.diamond]: {
+      tier: 30,
+      tools: [ToolsModels.pickaxe]
+    },
     [TilesTypes.stone]: {
       tier: 10,
       tools: [ToolsModels.pickaxe]
@@ -24,6 +32,14 @@ export default  {
     },
     [TilesTypes.leaves]: {
       tier: 10,
+      tools: [ToolsModels.axe]
+    },
+    [TilesTypes.leaveser]: {
+      tier: 30,
+      tools: [ToolsModels.axe]
+    },
+    [TilesTypes.wooder]: {
+      tier: 30,
       tools: [ToolsModels.axe]
     },
     [TilesTypes.sky]: {
