@@ -1,39 +1,39 @@
 # 🐱‍👤 MineCraft - Weekend assignment
-I was given a task @AppleSeeds Bootcamp to make a dice rollong game while only using ```JavaScript```, ```HTML``` & ```CSS``` 
+I was given a task @AppleSeeds Bootcamp to make a small MineCraft game while only using ```JavaScript```, ```HTML``` & ```CSS``` 
 
-The basic task was to make a dice game with the specifications given in writing and a video.
+The basic task was to make a game with the specifications given in writing and a video.
 
 <br />
 
-### My design was straightforward and simple and I made sure to include:
+### My design was simple and I made sure to include:
 
 
-#### 6-6 reset the current points and move turn
-whenever a 6-6 dice is rolled the player lose his turn and all the current points.
+#### Small tutorial
+A landing page with a start button and insturctions
 
 #### All basic rules set in place
-every player can role the dice until he uses 'hold' and if a player reach the target points he win, if he pass the target points he loss
+The player can pick up Tiles by using the tools and place them back to the world
 
 
-#### Styling same as original
+#### Styling same close to origin
 I was trying to make the basic game look almost the same as the original game from the specs
 
 <a href="gameSpecs.pdf" target="_blank">Instructions-PDF</a>
 
 <br>
 
-#### Themes
-I decided to add some color themes for fun so you can pick one out of 3 different styles
+#### Features
+I decided to add some extra stuff for fun like upgrading weapons and giving tier to the tiles
 
 #### App responsiveness
-I made sure that the app is useable for smaller screens as well.
+I made sure that the app is useable for smaller screens as well in landscape mode.
 
 <br />
 
 
 ## Demo site link
 
-https://elad-dice-game.netlify.app/
+https://elad-minecraft2d.netlify.app/
 
 
 <br />
@@ -41,16 +41,12 @@ https://elad-dice-game.netlify.app/
 
 ## Screenshots
 
-![Alt text](./assets/images/screenshots/Screenshot1.png?raw=true "Title") 
+![Alt text](./assets/screenshots/Screenshot1.png?raw=true "Title") 
 
-![plot](./assets/images/screenshots/Screenshot2.png) 
+![plot](./assets/screenshots/Screenshot2.png) 
 
-![plot](./assets/images/screenshots/Screenshot3.png) 
+![plot](./assets/screenshots/Screenshot3.png) 
 
-![plot](./assets/images/screenshots/Screenshot4.png) 
-
-  ### dice game in mobile screen:
-<img src="./assets/images/screenshots/Screenshot5.png" width="400" height="700" />
 
 ## Deployment
 
